@@ -1,0 +1,79 @@
+.demo-form {
+  padding: 0px 16px;
+}
+
+.demo-form-buttons {
+  padding: 20px 24px;
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 8px;
+}
+
+.demo-section {
+  text-align: center;
+  padding: 48px 16px;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 16px;
+}
+
+/* Large "15+" Background Text */
+.background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 400px;
+  font-weight: bold;
+  background: linear-gradient(to bottom, #ccc6ff, #f8f1fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.3;
+  white-space: nowrap;
+  z-index: -1;
+}
+
+.gradient-title {
+  font-size: 56px;
+  font-weight: bold;
+  background: linear-gradient(to left, #a263e8, #4559ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.demo-sub-heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+
+.sub-heading-gray {
+  font-size: 18px;
+  color: gray;
+  /* margin-bottom: 10px; */
+  /* width: 80px; */
+}
+
+.description {
+  font-size: 16px;
+  color: #555;
+  display: block;
+  margin-bottom: 20px;
+  width: 600px;
+}
+
+.demo-image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.demo-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+}

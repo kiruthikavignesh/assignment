@@ -1,0 +1,112 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+/* Each nav item */
+.nav-item {
+  position: relative;
+}
+
+/* Nav buttons */
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.nav-button:hover {
+  color: #007bff;
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown li:hover {
+  background: #f5f5f5;
+}
+
+/* Purchase Now Button */
+.purchase-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.purchase-btn:hover {
+  background: #0056b3;
+}
+
+.button-gradient-border {
+  position: relative;
+  background-color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  border: none; /* Remove normal border */
+  border-radius: 12px; /* Rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.button-gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 4px; /* Matches the border thickness */
+  border-radius: 12px; /* Ensure it matches the button */
+  background: linear-gradient(to right, #cfb1e3, #657fea);
+  -webkit-mask: linear-gradient(white 0 0) content-box,
+    linear-gradient(white 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.button-gradient-border:hover {
+  background-color: #f4f4f4;
+}

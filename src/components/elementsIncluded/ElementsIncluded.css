@@ -1,0 +1,94 @@
+.elements-container {
+  text-align: center;
+  padding: 40px;
+  position: relative;
+}
+
+.no-plugins {
+  background-color: #fff;
+  color: black;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.elements-title {
+  font-size: 36px;
+  font-weight: bold;
+  padding-top: 16px;
+  padding-bottom: 40px;
+  display: block;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #3258f0, #bf78ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.marquee-container {
+  width: 90%;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee {
+  display: flex;
+  gap: 20px;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marqueeScroll 10s linear infinite;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  color: gray;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Duplicating marquee content for smooth infinite scrolling */
+.marquee-container .marquee {
+  display: flex;
+  width: max-content;
+}
+
+.marquee-container .marquee > * {
+  flex: 0 0 auto;
+}
+
+.marquee-content {
+  /* Fading effect */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+}

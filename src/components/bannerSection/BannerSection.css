@@ -1,0 +1,83 @@
+.banner-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #f5f5f500;
+}
+
+.text-container {
+  flex: 1;
+  max-width: 50%;
+}
+
+.text-container h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.text-container p {
+  font-size: 18px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.custom-button {
+  background-color: #1890ff;
+  border-color: #1890ff;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.image-container {
+  flex: 1;
+  text-align: right;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-container {
+    max-width: 100%;
+  }
+
+  .image-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.stars {
+  display: flex;
+  gap: 5px;
+}
+
+.star-icon {
+  font-size: 24px;
+  color: #ff8f3c; /* Orange color */
+}
+
+.rating-text {
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+  /* font-weight: bold; */
+}
