@@ -41,23 +41,6 @@
   height: auto;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .banner-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .text-container {
-    max-width: 100%;
-  }
-
-  .image-container {
-    text-align: center;
-    margin-top: 20px;
-  }
-}
-
 .star-rating {
   display: flex;
   flex-direction: column;
@@ -80,4 +63,34 @@
   color: #333;
   margin-top: 5px;
   /* font-weight: bold; */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .text-container {
+    max-width: 100%;
+  }
+
+  .image-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .star-icon {
+    font-size: 16px;
+    color: #ff8f3c; /* Orange color */
+  }
+
+  .rating-text {
+    font-size: 12px !important;
+    color: #333;
+    margin-top: 5px;
+    /* font-weight: bold; */
+  }
 }

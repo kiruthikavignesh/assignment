@@ -16,10 +16,19 @@ const menuItems = [
 ];
 
 const getDropdownMenu = () => (
-  <Menu>
-    <Menu.Item key="1">Option 1</Menu.Item>
-    <Menu.Item key="2">Option 2</Menu.Item>
-    <Menu.Item key="3">Option 3</Menu.Item>
+  <Menu
+    style={{
+      fontFamily: "Poppins, sans-serif",
+    }}>
+    <Menu.Item key="1" style={{ fontFamily: "Poppins, sans-serif" }}>
+      Option 1
+    </Menu.Item>
+    <Menu.Item key="2" style={{ fontFamily: "Poppins, sans-serif" }}>
+      Option 2
+    </Menu.Item>
+    <Menu.Item key="3" style={{ fontFamily: "Poppins, sans-serif" }}>
+      Option 3
+    </Menu.Item>
   </Menu>
 );
 
@@ -55,9 +64,13 @@ const NavBar = () => {
         {menuItems.map((item) => (
           <Menu.Item
             key={item.key}
-            style={{ color: "black", fontWeight: "500" }}>
+            style={{
+              color: "black",
+              fontWeight: "500",
+              fontFamily: "Poppins, sans-serif",
+            }}>
             <Dropdown overlay={getDropdownMenu()} trigger={["hover"]}>
-              <a style={{ color: "black" }}>
+              <a style={{ color: "black", fontFamily: "Poppins, sans-serif" }}>
                 {item.label} <DownOutlined />
               </a>
             </Dropdown>
@@ -75,12 +88,10 @@ const NavBar = () => {
           style={{
             padding: "8px 8px",
             background: "white",
-            // borderWidth: "4px",
             borderStyle: "solid",
             borderColor: "linear-gradient(to right, #CFB1E3, #657FEA)",
             borderImageSource: "linear-gradient(to right, #CFB1E3, #657FEA)",
             borderImageSlice: 1,
-            // borderRadius: "12px",
           }}>
           Purchase Now
         </span>

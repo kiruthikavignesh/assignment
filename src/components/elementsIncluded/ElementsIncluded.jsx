@@ -26,6 +26,8 @@ import React from "react";
 import { Tag } from "antd";
 
 const ElementsIncluded = () => {
+  const isMobile = window.innerWidth < 768;
+
   const tags = [
     [
       { text: "Brand", icon: <FaTags /> },
@@ -61,7 +63,7 @@ const ElementsIncluded = () => {
         //  color="blue"
         style={{
           color: "#2F57EF",
-          fontSize: 14,
+          fontSize: isMobile ? 10 : 14,
           marginBottom: 8,
           padding: "8px 16px",
           borderRadius: 126,

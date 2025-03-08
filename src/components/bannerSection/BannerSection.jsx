@@ -44,6 +44,8 @@ const features = [
 ];
 
 const BannerSection = () => {
+  const isMobile = window.innerWidth < 768;
+
   const renderStarRating = () => {
     return (
       <div style={{ width: "50%" }}>
@@ -69,29 +71,44 @@ const BannerSection = () => {
   };
 
   const renderLeftContainer = () => {
-    const words = ["University.", "Kinder garden.", "School.", "Awards."];
+    const words = [
+      "University.",
+      "Awwwards.",
+      "Instructor.",
+      "Online Courses.",
+      "Gym Coaching.",
+      "School.",
+      "Kinder garden.",
+    ];
 
     return (
       <div className="text-container">
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            flexDirection: "row",
-            paddingBottom: 16,
-          }}>
-          {renderStarRating()}
-          {renderEnvatoRating()}
-        </div>
+        {!isMobile && (
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "row",
+              paddingBottom: 16,
+            }}>
+            {renderStarRating()}
+            {renderEnvatoRating()}
+          </div>
+        )}
 
         <div>
-          <span style={{ fontSize: 48, fontWeight: "bold", paddingTop: 48 }}>
+          <span
+            style={{
+              fontSize: isMobile ? 24 : 48,
+              fontWeight: "bold",
+              paddingTop: 48,
+            }}>
             Have your dream
           </span>
         </div>
         <div
           style={{
-            fontSize: 48,
+            fontSize: isMobile ? 24 : 48,
             fontWeight: "bold",
             marginTop: 16,
             marginBottom: 8,
@@ -101,7 +118,7 @@ const BannerSection = () => {
         <AnimatedText words={words} />
         <div
           style={{
-            fontSize: 48,
+            fontSize: isMobile ? 24 : 48,
             marginTop: 16,
           }}>
           <p>

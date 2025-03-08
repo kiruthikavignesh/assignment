@@ -77,3 +77,15 @@
   height: auto;
   border-radius: 8px;
 }
+
+@media (max-width: 768px) {
+  .gradient-title {
+    font-size: 32px;
+    font-weight: bold;
+    background: linear-gradient(to left, #a263e8, #4559ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+}

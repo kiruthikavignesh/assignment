@@ -96,4 +96,11 @@ input {
   .form-row {
     flex-direction: column;
   }
+  .tab-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
 }

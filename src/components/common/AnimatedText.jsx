@@ -5,26 +5,26 @@ function AnimatedText({ words }) {
   const [displayedText, setDisplayedText] = useState("");
   const [letterIndex, setLetterIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
+  const isMobile = window.innerWidth < 768;
 
   useEffect(() => {
     if (letterIndex < words[wordIndex].length) {
       const timer = setTimeout(() => {
         setDisplayedText((prev) => prev + words[wordIndex][letterIndex]);
         setLetterIndex((prev) => prev + 1);
-      }, 150); // Adjust speed as needed
+      }, 150);
 
       return () => clearTimeout(timer);
     } else {
-      // After word completes, fade out, pause & switch to next word
       setTimeout(() => {
         setIsFading(true);
         setTimeout(() => {
-          setDisplayedText(""); // Clear previous word
+          setDisplayedText("");
           setLetterIndex(0);
-          setWordIndex((prev) => (prev + 1) % words.length); // Loop back after last word
+          setWordIndex((prev) => (prev + 1) % words.length);
           setIsFading(false);
-        }, 300); // Short fade-out duration
-      }, 1500); // Pause before switching words
+        }, 300);
+      }, 1500);
     }
   }, [letterIndex, wordIndex, words]);
 
@@ -32,21 +32,22 @@ function AnimatedText({ words }) {
     <div
       style={{
         position: "relative",
-        height: "72px", // Set fixed height to prevent flickering
+        height: "72px",
         display: "flex",
         alignItems: "center",
         overflow: "hidden",
+        justifyContent: isMobile ? "center" : "start",
       }}>
       <span
         style={{
-          fontSize: "48px",
+          fontSize: isMobile ? 24 : 48,
           fontWeight: "bold",
           background: "linear-gradient(to right, #3257EF, #B766E7)",
           WebkitBackgroundClip: "text",
           color: "transparent",
           display: "inline-block",
           transition: "opacity 0.3s ease-in-out",
-          opacity: isFading ? 0 : 1, // Smooth fade-out
+          opacity: isFading ? 0 : 1,
         }}>
         {displayedText}
       </span>
